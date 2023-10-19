@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navlink = () => {
     return (
-        <div className='flex lg:flex-row md:flex-row flex-col mt-4 gap-6 text-2xl font-bold'>
+        <div className='flex lg:flex-row md:flex-row flex-col mt-4 gap-6 text-2xl font-bold lg:ml-1 md:ml-1 ml-60'>
        <div>
        <NavLink
         to="/"
