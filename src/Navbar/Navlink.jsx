@@ -3,69 +3,69 @@ import { NavLink } from 'react-router-dom';
 
 const Navlink = () => {
     return (
-        <div>
+        <div className='flex lg:flex-row md:flex-row flex-col mt-4 gap-6 text-2xl font-bold'>
        <div>
        <NavLink
         to="/"
          className={({ isActive, isPending }) =>
-         isPending ? "pending" : isActive ? "bg-red-600 underline" : ""
+         isPending ? "pending" : isActive ? "text-red-600 underline" : ""
            }
 >
          Home
-       </NavLink>;
+       </NavLink>
        </div>
 
        <div>
        <NavLink
         to="/addcart"
          className={({ isActive, isPending }) =>
-         isPending ? "pending" : isActive ? "bg-red-600 underline" : ""
+         isPending ? "pending" : isActive ? "text-red-600 underline" : ""
            }
 >
          Add Card
-       </NavLink>;
+       </NavLink>
        </div>
        
        <div>
        <NavLink
         to="/log"
          className={({ isActive, isPending }) =>
-         isPending ? "pending" : isActive ? "bg-red-600 underline" : ""
+         isPending ? "pending" : isActive ? "text-red-600 underline" : ""
            }
 >
          Login
-       </NavLink>;
+       </NavLink>
        </div>
     
        <div>
        <NavLink
         to="/mycart"
          className={({ isActive, isPending }) =>
-         isPending ? "pending" : isActive ? "bg-red-600 underline" : ""
+         isPending ? "pending" : isActive ? "text-red-600 underline" : ""
            }
 >
          My Cart
-       </NavLink>;
+       </NavLink>
        </div>
        <div>
        <NavLink
         to="/cont"
          className={({ isActive, isPending }) =>
-         isPending ? "pending" : isActive ? "bg-red-600 underline" : ""
+         isPending ? "pending" : isActive ? "text-red-600 underline" : ""
            }
 >
          Contruct
-       </NavLink>;
+       </NavLink>
        </div>
        <div>
        <NavLink
         to="/over"
          className={({ isActive, isPending }) =>
-         isPending ? "pending" : isActive ? "bg-red-600 underline" : ""
+         isPending ? "pending" : isActive ? "text-red-600 underline" : ""
            }
 >
          Overview
-       </NavLink>;
+       </NavLink>
        </div>
         </div>
     );

@@ -1,15 +1,16 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import Navlink from './Navlink';
+
 
 const Navbar = () => {
     return (
-        <div className='flex lg:flex-row md:flex-row flex-col py-7 shadow-lg '>
+        <div className='flex lg:flex-row md:flex-row flex-col py-7 shadow-lg justify-around '>
            <div className='flex lg:flex-row md:flex-row flex-col font-bold gap-2'>
            <img className='w-52 h-24' src="/public/image/fas.png" alt="" />
            <h1 className='text-3xl mt-4 text-rose-600 '>Fashion Brand</h1>
            </div>
-          <div>
-           <NavLink></NavLink>
+          <div className=''>
+           <Navlink></Navlink>
           </div>
           <div className='flex lg:flex-row md:flex-row flex-col mt-4'>
             <div>
