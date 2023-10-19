@@ -12,6 +12,7 @@ import Mycart from './MyCart/Mycart.jsx';
 import Overview from './Overview/Overview.jsx';
 import Contruct from './contructInfo/Contruct.jsx';
 import Erro from './Error/Erro';
+import FirstHome from './Home/FirstHome';
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
     element:<Home></Home>,
     errorElement:<Erro></Erro>,
     children:[
+      {
+        path:"/",
+        element:<FirstHome></FirstHome>
+      },
       {
         path: "/addcart",
         element:<Addcard></Addcard>
