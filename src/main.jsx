@@ -11,12 +11,14 @@ import Login from './Login/Login.jsx';
 import Mycart from './MyCart/Mycart.jsx';
 import Overview from './Overview/Overview.jsx';
 import Contruct from './contructInfo/Contruct.jsx';
+import Erro from './Error/Erro';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:<Home></Home>,
+    errorElement:<Erro></Erro>,
     children:[
       {
         path: "/addcart",
