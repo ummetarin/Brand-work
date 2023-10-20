@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<FirstHome></FirstHome>,
-        loader:()=>fetch(`/public/data.json`)
+        loader:()=>fetch(`/data.json`)
       },
       {
         path: "/addcart",

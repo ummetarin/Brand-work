@@ -1,12 +1,24 @@
 import React from 'react';
+import Slider from './slider';
 
 const Addcard = () => {
     return (
         <div>
+          {/* slider */}
+                
+        <div>
+           <Slider></Slider>
+        </div>
+
+
+
+
+
+        {/* form */}
              <div className='bg-gray-500 pb-24 mt-24 font-bold'>
             <h1 className='font-extrabold text-center lg:text-5xl md:text-4xl text-2xl pt-16'>Add New Element In The Card</h1>
           <form>         
-          <div className='flex lg:flex-row md:flex-row flex-col justify-center gap-14 '>
+          <div className='flex lg:flex-row md:flex-row flex-col justify-center gap-14 mt-12'>
              <div className="form-control">
               <label className="label">
               <span className="label-text">Username</span>
@@ -21,8 +33,8 @@ const Addcard = () => {
               <span className="label-text">Username</span>
               </label>
               <label className="input-group">
-             <span className='w-24'>Quantity</span>
-              <input type="text" name='Quantity' placeholder="Quantity" className="input input-bordered  lg:w-[600px] md:w-[600px] w-[400px]" />
+             <span className='w-24'>Brand Name</span>
+              <input type="text" name='brand' placeholder="Brand Name" className="input input-bordered  lg:w-[600px] md:w-[600px] w-[400px]" />
             </label>
              </div>
          </div>
@@ -32,8 +44,8 @@ const Addcard = () => {
               <span className="label-text">Username</span>
               </label>
               <label className="input-group  ">
-             <span className='w-24'>Colors</span>
-              <input type="text" name='Colors' placeholder="Color" className="input  input-bordered lg:w-[600px] md:w-[600px] w-[400px]" />
+             <span className='w-24'>Type</span>
+              <input type="text" name='Type' placeholder="Type" className="input  input-bordered lg:w-[600px] md:w-[600px] w-[400px]" />
             </label>
              </div>
              <div className="form-control">
@@ -42,7 +54,7 @@ const Addcard = () => {
               </label>
               <label className="input-group">
              <span className='w-24'>Price</span>
-              <input type="text" name='Price' placeholder="Quantity" className="input input-bordered  lg:w-[600px] md:w-[600px] w-[400px]" />
+              <input type="text" name='Price' placeholder="Price" className="input input-bordered  lg:w-[600px] md:w-[600px] w-[400px]" />
             </label>
              </div>
          </div>
@@ -52,8 +64,8 @@ const Addcard = () => {
               <span className="label-text">Username</span>
               </label>
               <label className="input-group   ">
-             <span className='w-24'>ID</span>
-              <input type="text" name='ID' placeholder="Name" className="input  input-bordered lg:w-[600px] md:w-[600px] w-[400px]" />
+             <span className='w-24'>Short Description</span>
+              <input type="text" name='sortds' placeholder="Short description" className="input  input-bordered lg:w-[600px] md:w-[600px] w-[400px]" />
             </label>
              </div>
              <div className="form-control">
@@ -61,8 +73,8 @@ const Addcard = () => {
               <span className="label-text">Username</span>
               </label>
               <label className="input-group">
-             <span className='w-24'>Chef</span>
-              <input type="text" name='Chef' placeholder="Chef" className="input input-bordered  lg:w-[600px] md:w-[600px] w-[400px]" />
+             <span className='w-24'>Rating</span>
+              <input type="text" name='Rating' placeholder="Rating" className="input input-bordered  lg:w-[600px] md:w-[600px] w-[400px]" />
             </label>
              </div>
          </div>
@@ -70,8 +82,8 @@ const Addcard = () => {
               <label className="label">
               </label>
               <label className="input-group">
-             <span className='w-24 ml-24 '>url</span>
-              <input type="text" name='photo' placeholder="photo" className="input input-bordered  lg:w-[1300px] md:w-[600px] w-[400px]" />
+             <span className='w-24 lg:ml-4 md:ml-4'>Image</span>
+              <input type="text" name='Image' placeholder="Image" className="input input-bordered  lg:w-[1500px] md:w-[800px] w-[800px]" />
             </label>
              </div>
 
