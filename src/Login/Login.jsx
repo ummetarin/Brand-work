@@ -14,7 +14,9 @@ const Login = () => {
     createUser(email,password)
     .then(result =>{
       console.log(result.user);
-      const user={email}
+      const createAt=result?.user?.metadata?.creationTime;
+
+      const user={email,createAt:createAt}
       fetch ('http://localhost:5000/user',{
         method:'POST',
         headers:{
@@ -25,7 +27,9 @@ const Login = () => {
     })
           .then(res=>res.json())
           .then(data=>{
-          console.log(data);
+          if(data.insertedId){
+            alert('a')
+          }
 })
 
   })

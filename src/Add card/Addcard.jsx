@@ -1,5 +1,6 @@
+import { data } from 'autoprefixer';
 import React from 'react';
-
+import Swal from 'sweetalert2';
 
 const Addcard = () => {
 
@@ -15,6 +16,30 @@ const Addcard = () => {
                const Image=form.Image.value;
            const newbrand={name,brand,Type,Price,sortds,Rating,Image};
            console.log(newbrand);
+          
+           fetch('http://localhost:5000/dataforall',{
+               method:'POST',
+               headers:{
+                'content-type':'application/json'
+               },
+               body:JSON.stringify(newbrand),
+
+           }
+           )
+           .then(res=>res.json())
+           .then(data=>{
+            console.log(data);
+            if(data.insertedId){
+              Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'The Product is added',
+                showConfirmButton: false,
+                timer: 1500
+              })
+            }
+           })
+
 
             }
 
@@ -72,7 +97,7 @@ const Addcard = () => {
               <span className="label-text">Username</span>
               </label>
               <label className="input-group   ">
-             <span className='w-24'>Short Description</span>
+             <span className='w-24'>Shortdes</span>
               <input type="text" name='sortds' placeholder="Short description" className="input  input-bordered lg:w-[600px] md:w-[600px] w-[400px]" />
             </label>
              </div>

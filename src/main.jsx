@@ -16,6 +16,8 @@ import FirstHome from './Home/FirstHome';
 import DetailsData from './DetailsData/DetailsData';
 import SignUp from './Login/SignUp';
 import Provider from './Provider/Provider';
+import Showdet from './Showdet/Showdet';
+import Update from './update/Update';
 
 
 const router = createBrowserRouter([
@@ -53,6 +55,14 @@ const router = createBrowserRouter([
         path:"/detailsdata/:name",
         element:<DetailsData></DetailsData>,
          loader: ({params}) => fetch(`http://localhost:5000/dataforall/${params.name}`)
+      },{
+        path:"/dataforshow/:id",
+        element:<Showdet></Showdet>,
+        loader:({params})=>fetch(`http://localhost:5000/dataforshow/${params.id}`)
+      },{
+        path:"/updatedata/:id",
+        element:<Update></Update>,
+        loader: ({params}) => fetch(`http://localhost:5000/dataforupdateall/${params.id}`)
       }
 
     ]

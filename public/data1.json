@@ -5,6 +5,7 @@
        "Name" :"Nike Brand",
       "BrandName":"Nike",
       "Type":"Shoe",
+      "Shortdescription":"Nikeowns a multitude of world-famous brands such as Nike Pro, Nike Golf, Nike+, Air Force 1, Air Jordan, Air Max, Nike Blazers, Nike Dunk, Nike Skateboarding and Nike CR7",
       "Price":29.99,
       "Rating":4.8
      
@@ -16,6 +17,7 @@
        "Name" :"Nike Brand",
       "BrandName":"Nike",
       "Type":"T-Shirt",
+      "Shortdescription":" Nike owns a multitude of world-famous brands such as Nike Pro, Nike Golf, Nike+, Air Force 1, Air Jordan, Air Max, Nike Blazers, Nike Dunk, Nike Skateboarding and Nike CR7",
       "Price":56.99,
       "Rating":4.5
       
@@ -27,6 +29,7 @@
      "Name" :"Nike Brand",
     "BrandName":"Nike",
     "Type":"Bag",
+    "Shortdescription":" Nike owns a multitude of world-famous brands such as Nike Pro, Nike Golf, Nike+, Air Force 1, Air Jordan, Air Max, Nike Blazers, Nike Dunk, Nike Skateboarding and Nike CR7",
     "Price":49.99,
     "Rating":4.2
     
@@ -38,6 +41,7 @@
      "Name" :"Nike Brand",
     "BrandName":"Nike",
     "Type":"Jewellary",
+    "Shortdescription": " Nike owns a multitude of world-famous brands such as Nike Pro, Nike Golf, Nike+, Air Force 1, Air Jordan, Air Max, Nike Blazers, Nike Dunk, Nike Skateboarding and Nike CR7",
     "Price":34.99,
     "Rating":3.5
     
@@ -48,6 +52,7 @@
        "Name" :"Gucci Brand",
       "BrandName":"Gucci",
       "Type":"Jewellery",
+      "Shortdescription": "Gucci is an Italian fashion brand founded in 1921 by Guccio Gucci, making it one of the oldest Italian fashion brands in operation today.",
       "Price":29.99,
       "Rating":4.7
       
@@ -59,6 +64,7 @@
        "Name" :"Gucci Brand",
       "BrandName":"Gucci",
       "Type":"Bag",
+      "Shortdescription": "Gucci is an Italian fashion brand founded in 1921 by Guccio Gucci, making it one of the oldest Italian fashion brands in operation today.",
       "Price":23.99,
       "Rating":4.9
    
@@ -71,6 +77,7 @@
      "Name" :"Gucci Brand",
     "BrandName":"Gucci",
     "Type":"Shoe",
+    "Shortdescription": "Gucci is an Italian fashion brand founded in 1921 by Guccio Gucci, making it one of the oldest Italian fashion brands in operation today.",
     "Price":19.99,
     "Rating":2.4
   
@@ -83,6 +90,7 @@
      "Name" :"Gucci Brand",
     "BrandName":"Gucci",
     "Type":"Watch",
+    "Shortdescription":"Gucci is an Italian fashion brand founded in 1921 by Guccio Gucci, making it one of the oldest Italian fashion brands in operation today.",
     "Price":49.99,
     "Rating":4.0
    
@@ -95,6 +103,7 @@
        "Name" :"Zara Brand",
       "BrandName":"Zara",
       "Type":"Jewellary",
+      "Shortdescription":"ZARA is a Spanish multi-national retail clothing chain. It specializes in fast fashion, and sells clothing, accessories, shoes, beauty products and perfumes",
       "Price":39.99,
       "Rating":4.8
       
@@ -106,6 +115,7 @@
      "Name" :"Zara Brand",
     "BrandName":"Zara",
     "Type":"Bag",
+    "Shortdescription":"ZARA is a Spanish multi-national retail clothing chain. It specializes in fast fashion, and sells clothing, accessories, shoes, beauty products and perfumes",
     "Price":49.99,
     "Rating":4.5
    
@@ -117,6 +127,7 @@
      "Name" :"Zara Brand",
     "BrandName":"Zara",
     "Type":"Cloth",
+    "Shortdescription":"ZARA is a Spanish multi-national retail clothing chain. It specializes in fast fashion, and sells clothing, accessories, shoes, beauty products and perfumes",
     "Price":24.99,
     "Rating":4.2
     
@@ -128,6 +139,7 @@
        "Name" :"Zara Brand",
       "BrandName":"Zara",
       "Type":"Shoe",
+      "Shortdescription":"ZARA is a Spanish multi-national retail clothing chain. It specializes in fast fashion, and sells clothing, accessories, shoes, beauty products and perfumes",
       "Price":19.99,
       "Rating":4.8
      
@@ -139,6 +151,7 @@
    "Name" :"H & M Brand",
   "BrandName":"H & M",
   "Type":"Cloth",
+  "Shortdescription":"The H&M Group is one of the leading fashion companies worldwide. It comprises the fashion brands H&M, COS, Weekday, Cheap Monday, & Other",
   "Price":39.99,
   "Rating":4.8
   },
@@ -148,6 +161,7 @@
      "Name" :"H & M Brand",
     "BrandName":"H & M",
     "Type":"Watch",
+    "Shortdescription":"The H&M Group is one of the leading fashion companies worldwide. It comprises the fashion brands H&M, COS, Weekday, Cheap Monday, & Other",
     "Price":69.99,
     "Rating":4.4
     
@@ -159,6 +173,7 @@
      "Name" :"H & M Brand",
     "BrandName":"H & M",
     "Type":"Bag",
+    "Shortdescription":"The H&M Group is one of the leading fashion companies worldwide. It comprises the fashion brands H&M, COS, Weekday, Cheap Monday, & Other",
     "Price":69.99,
     "Rating":4.8
     
@@ -170,6 +185,7 @@
      "Name" :"H & M Brand",
     "BrandName":"H & M",
     "Type":"Shoe",
+    "Shortdescription":"The H&M Group is one of the leading fashion companies worldwide. It comprises the fashion brands H&M, COS, Weekday, Cheap Monday, & Other",
     "Price":42.99,
     "Rating":3.5
   
@@ -181,6 +197,7 @@
    "Name" :"Leva Brand",
   "BrandName":"Leva",
   "Type":"Bag",
+  "Shortdescription":"Lev Brands is a parent company, focused on brand acquisitions in the E-Commerce/Beauty & personal Care space. Through New York Biology, Handcraft Blends",
   "Price":56.99,
   "Rating":4.5
    
@@ -192,6 +209,7 @@
      "Name" :"Leva Brand",
     "BrandName":"Leva",
     "Type":"Jewellary",
+    "Shortdescription":"Lev Brands is a parent company, focused on brand acquisitions in the E-Commerce/Beauty & personal Care space. Through New York Biology, Handcraft Blends",
     "Price":23.99,
     "Rating":5.8
  
@@ -203,6 +221,7 @@
      "Name" :"Leva Brand",
     "BrandName":"Leva",
     "Type":"Watch",
+    "Shortdescription":"Lev Brands is a parent company, focused on brand acquisitions in the E-Commerce/Beauty & personal Care space. Through New York Biology, Handcraft Blends",
     "Price":19.99,
     "Rating":2.5
  
@@ -214,6 +233,7 @@
      "Name" :"Leva Brand",
     "BrandName":"Leva",
     "Type":"Shoe",
+    "Shortdescription":"Lev Brands is a parent company, focused on brand acquisitions in the E-Commerce/Beauty & personal Care space. Through New York Biology, Handcraft Blends",
     "Price":44.99,
     "Rating":4.7
 

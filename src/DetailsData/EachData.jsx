@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const EachData = ({data}) => {
 
     console.log(data);
-    const {Image,Name,BrandName,Type,Price,Rating} = data||{}
+    const {ID,Image,Name,BrandName,Type,Price,Rating} = data||{}
 
     return (
         <div>
@@ -21,10 +22,10 @@ const EachData = ({data}) => {
             <div className="card-actions justify-center">
            <div className='flex flex-row gap-6 mt-4'>
            <div>
-            <button className='bg-red-500 text-white  text-2xl rounded-md  btn'>Details</button>
+           <Link to={`/dataforshow/${data.ID}`}> <button className='bg-red-500 text-white  text-2xl rounded-md  btn'>Details</button></Link>
           </div>
           <div>
-            <button className='bg-red-500 text-white text-2xl rounded-md  btn'>Update</button>
+          <Link to={`/updatedata/${data.ID}`}>  <button className='bg-red-500 text-white text-2xl rounded-md  btn'>Update</button></Link>
          </div>
          </div>
     </div>

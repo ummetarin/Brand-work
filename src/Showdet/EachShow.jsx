@@ -1,10 +1,10 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
 
-const Mycart = () => {
-    const data=useLoaderData()
+const EachShow = ({data}) => {
     console.log(data);
-  
+    const {ID,Image,Name,BrandName,Type,Price,Rating,Showdes} = data||{}
+    console.log(ID);
+
     return (
         <div>
             <div className=' font-bold'>
@@ -12,6 +12,7 @@ const Mycart = () => {
              <figure><img className='w-[350px]' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjyWouiPHFwiPWshIbGXRyREYSICyWWmDt-TyYvLQc&s" alt="Shoes" /></figure>
              <div className="card-body">
             <h1 className='text-xl mt-4 '>Name:</h1>    
+            <h1 className='text-xl mt-2 '>Price:</h1>
             <h1 className='text-xl mt-2'>Id</h1>
             <h1 className='text-xl mt-2'>quantity</h1>
             <h1 className='text-xl mt-2'>taste</h1>
@@ -35,4 +36,4 @@ const Mycart = () => {
     );
 };
 
-export default Mycart;
+export default EachShow;
