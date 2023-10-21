@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CardDAta = ({card}) => {
     console.log(card);
     const {id,name,image}=card || {}
-
+ console.log(name);
     return (
         <div>
         
@@ -13,7 +14,7 @@ const CardDAta = ({card}) => {
              <div className="card-body">
             <h1 className='text-4xl mt-4 text-center '>{name} Brand</h1> 
             <div className='mx-auto mt-2'>
-            <button className='bg-red-500  text-2xl rounded-md  text-white btn'>Detals</button>
+           <Link to={`/detailsdata/${name}`}> <button className='bg-red-500  text-2xl rounded-md  text-white btn'>Detals</button></Link>
           </div>   
             
           

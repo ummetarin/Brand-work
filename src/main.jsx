@@ -13,6 +13,7 @@ import Overview from './Overview/Overview.jsx';
 import Contruct from './contructInfo/Contruct.jsx';
 import Erro from './Error/Erro';
 import FirstHome from './Home/FirstHome';
+import DetailsData from './DetailsData/DetailsData';
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,11 @@ const router = createBrowserRouter([
       },{
         path:"/cont",
         element:<Contruct></Contruct>
+      },
+      {
+        path:"/detailsdata/:name",
+        element:<DetailsData></DetailsData>,
+        loader: ({params}) => fetch(`http://localhost:5000/dataforall/${params.name}`)
       }
 
     ]

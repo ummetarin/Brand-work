@@ -1,0 +1,221 @@
+[
+  { 
+      "ID":"1",
+      "Image" :"https://i.ibb.co/s25krqx/Nike1.jpg",
+       "Name" :"Nike Brand",
+      "BrandName":"Nike",
+      "Type":"Shoe",
+      "Price":29.99,
+      "Rating":4.8
+     
+   
+  },
+  {   
+    "ID":"2",
+      "Image" :"https://i.ibb.co/hLt7bsX/nike2.jpg",
+       "Name" :"Nike Brand",
+      "BrandName":"Nike",
+      "Type":"T-Shirt",
+      "Price":56.99,
+      "Rating":4.5
+      
+   
+  },
+  {
+    "ID":"3",
+    "Image" :"https://i.ibb.co/HhhKmD4/nike3.jpg",
+     "Name" :"Nike Brand",
+    "BrandName":"Nike",
+    "Type":"Bag",
+    "Price":49.99,
+    "Rating":4.2
+    
+    
+  },
+  {
+    "ID":"4",
+    "Image" :"https://i.ibb.co/3mYjLSq/nike4.jpg",
+     "Name" :"Nike Brand",
+    "BrandName":"Nike",
+    "Type":"Jewellary",
+    "Price":34.99,
+    "Rating":3.5
+    
+  },
+  {
+     "ID":"5",
+      "Image" :"https://i.ibb.co/ZmVJqmT/gus1.jpg",
+       "Name" :"Gucci Brand",
+      "BrandName":"Gucci",
+      "Type":"Jewellery",
+      "Price":29.99,
+      "Rating":4.7
+      
+  
+  },
+  {
+    "ID":"6",
+      "Image" :"https://i.ibb.co/j618TC4/gucci2.jpg",
+       "Name" :"Gucci Brand",
+      "BrandName":"Gucci",
+      "Type":"Bag",
+      "Price":23.99,
+      "Rating":4.9
+   
+  
+    
+  },
+  {
+    "ID":"7",
+    "Image" :"https://i.ibb.co/xSqbdbd/guss3.jpg",
+     "Name" :"Gucci Brand",
+    "BrandName":"Gucci",
+    "Type":"Shoe",
+    "Price":19.99,
+    "Rating":2.4
+  
+
+   
+  },
+  { 
+    "ID":"8",
+    "Image" :"https://i.ibb.co/yBYDkff/guss4.jpg",
+     "Name" :"Gucci Brand",
+    "BrandName":"Gucci",
+    "Type":"Watch",
+    "Price":49.99,
+    "Rating":4.0
+   
+
+   
+  },
+  {
+      "ID":"9",
+      "Image" :"https://i.ibb.co/p1nTgqD/zara1.jpg",
+       "Name" :"Zara Brand",
+      "BrandName":"Zara",
+      "Type":"Jewellary",
+      "Price":39.99,
+      "Rating":4.8
+      
+  
+  },
+  { 
+    "ID":"10",
+    "Image" :"https://i.ibb.co/F88XRcw/zara22.jpg",
+     "Name" :"Zara Brand",
+    "BrandName":"Zara",
+    "Type":"Bag",
+    "Price":49.99,
+    "Rating":4.5
+   
+    
+  },
+  {
+    "ID":"11",
+    "Image" :"https://i.ibb.co/hYFrnpQ/zara4.jpg",
+     "Name" :"Zara Brand",
+    "BrandName":"Zara",
+    "Type":"Cloth",
+    "Price":24.99,
+    "Rating":4.2
+    
+ 
+  },
+  {
+    "ID":"12",
+      "Image" :"https://i.ibb.co/yqH9DTf/zarrra2.jpg",
+       "Name" :"Zara Brand",
+      "BrandName":"Zara",
+      "Type":"Shoe",
+      "Price":19.99,
+      "Rating":4.8
+     
+   
+  },
+  {    
+  "ID":"13",
+  "Image" :"https://i.ibb.co/LgXjtBK/hmclth.jpg",
+   "Name" :"H & M Brand",
+  "BrandName":"H & M",
+  "Type":"Cloth",
+  "Price":39.99,
+  "Rating":4.8
+  },
+  {
+    "ID":"14",
+    "Image" :"https://i.ibb.co/FDNLpHQ/hmm2222.jpg",
+     "Name" :"H & M Brand",
+    "BrandName":"H & M",
+    "Type":"Watch",
+    "Price":69.99,
+    "Rating":4.4
+    
+    
+  },
+  { 
+    "ID":"15",
+    "Image" :"https://i.ibb.co/k16y6cv/hm333333.jpg",
+     "Name" :"H & M Brand",
+    "BrandName":"H & M",
+    "Type":"Bag",
+    "Price":69.99,
+    "Rating":4.8
+    
+    
+  },
+  {
+    "ID":"16",
+    "Image" :"https://i.ibb.co/mTN5gd5/hm444444.jpg",
+     "Name" :"H & M Brand",
+    "BrandName":"H & M",
+    "Type":"Shoe",
+    "Price":42.99,
+    "Rating":3.5
+  
+  
+  },
+  {
+  "ID":"17",
+  "Image" :"https://ibb.co/LR4fTNV",
+   "Name" :"Leva Brand",
+  "BrandName":"Leva",
+  "Type":"Bag",
+  "Price":56.99,
+  "Rating":4.5
+   
+
+  },
+  {
+    "ID":"18",
+    "Image" :"https://i.ibb.co/YNmwkjq/lev2.jpg",
+     "Name" :"Leva Brand",
+    "BrandName":"Leva",
+    "Type":"Jewellary",
+    "Price":23.99,
+    "Rating":5.8
+ 
+   
+  },
+  {
+    "ID":"19",
+    "Image" :"https://i.ibb.co/ZxyXxzs/lev303.jpg",
+     "Name" :"Leva Brand",
+    "BrandName":"Leva",
+    "Type":"Watch",
+    "Price":19.99,
+    "Rating":2.5
+ 
+ 
+  },
+  {
+    "ID":"20",
+    "Image" :"https://i.ibb.co/qRPYjmG/levi4.jpg",
+     "Name" :"Leva Brand",
+    "BrandName":"Leva",
+    "Type":"Shoe",
+    "Price":44.99,
+    "Rating":4.7
+
+}
+]

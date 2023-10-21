@@ -1,23 +1,31 @@
 import React from 'react';
-import Slider from './slider';
+
 
 const Addcard = () => {
+
+    const handlebrand=event=>{
+              event.preventDefault();
+              const form=event.target;
+               const name=form.Name.value;
+               const brand=form.brand.value;
+               const Type=form.Type.value;
+               const Price=form.Price.value;
+               const sortds=form.sortds.value;
+               const Rating=form.Rating.value;
+               const Image=form.Image.value;
+           const newbrand={name,brand,Type,Price,sortds,Rating,Image};
+           console.log(newbrand);
+
+            }
+
     return (
         <div>
-          {/* slider */}
-                
-        <div>
-           <Slider></Slider>
-        </div>
-
-
-
 
 
         {/* form */}
              <div className='bg-gray-500 pb-24 mt-24 font-bold'>
             <h1 className='font-extrabold text-center lg:text-5xl md:text-4xl text-2xl pt-16'>Add New Element In The Card</h1>
-          <form>         
+          <form onSubmit={handlebrand}>         
           <div className='flex lg:flex-row md:flex-row flex-col justify-center gap-14 mt-12'>
              <div className="form-control">
               <label className="label">
