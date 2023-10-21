@@ -12,7 +12,6 @@ const Home = () => {
         <div>
             <Navbar></Navbar>
             <Outlet></Outlet>
-         
             <Footer></Footer>
         </div>
     );

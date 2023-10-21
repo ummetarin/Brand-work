@@ -4,7 +4,10 @@ import Section3 from '../Home/Section3';
 import EachData from './EachData';
 import { useLoaderData} from 'react-router-dom';
 
+
 const DetailsData = () => {
+
+ 
     const data=useLoaderData()
 
   //   const[data,setData]=useState([]);

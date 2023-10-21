@@ -1,6 +1,7 @@
 import React from 'react';
 import CardDAta from './CardDAta';
 
+
 const Card = ({card}) => {
     return (
         <div className='py-10 mt-24 '>

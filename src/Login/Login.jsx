@@ -4,6 +4,8 @@ import { AuthContext } from '../Provider/Provider';
 const Login = () => {
 
    const {createUser}=useContext(AuthContext);
+   const{googlesignin}=useContext(AuthContext)
+   console.log(googlesignin());
 
    const handlelogin=e=>{
     e.preventDefault();
@@ -43,6 +45,13 @@ const Login = () => {
     }
 
 
+    const handlegogle=()=>{
+           googlesignin().then((result)=>{
+            console.log(result.user);
+
+           })
+    }
+
     return (
         <div>
         
@@ -65,6 +74,10 @@ const Login = () => {
         </div>
         <div className="form-control mt-6">
           <button className="btn bg-red-600 text-white">Login</button>
+        </div>
+
+        <div className="form-control mt-6">
+          <button onClick={handlegogle} className="btn bg-red-600 text-white">Google Login</button>
         </div>
       </form>
     </div>

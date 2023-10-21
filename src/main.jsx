@@ -18,6 +18,8 @@ import SignUp from './Login/SignUp';
 import Provider from './Provider/Provider';
 import Showdet from './Showdet/Showdet';
 import Update from './update/Update';
+import Resister from './Login/Resister';
+import PR from './PrivateRoute/PR';
 
 
 const router = createBrowserRouter([
@@ -50,14 +52,17 @@ const router = createBrowserRouter([
       },{
         path:"/cont",
         element:<Contruct></Contruct>
+      },{
+        path:"/res",
+        element:<Resister></Resister>
       },
       {
         path:"/detailsdata/:name",
-        element:<DetailsData></DetailsData>,
+        element:<PR><DetailsData></DetailsData></PR>,
          loader: ({params}) => fetch(`http://localhost:5000/dataforall/${params.name}`)
       },{
         path:"/dataforshow/:id",
-        element:<Showdet></Showdet>,
+        element:<PR><Showdet></Showdet></PR>,
         loader:({params})=>fetch(`http://localhost:5000/dataforshow/${params.id}`)
       },{
         path:"/updatedata/:id",
