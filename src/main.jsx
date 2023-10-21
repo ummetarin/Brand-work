@@ -14,6 +14,8 @@ import Contruct from './contructInfo/Contruct.jsx';
 import Erro from './Error/Erro';
 import FirstHome from './Home/FirstHome';
 import DetailsData from './DetailsData/DetailsData';
+import SignUp from './Login/SignUp';
+import Provider from './Provider/Provider';
 
 
 const router = createBrowserRouter([
@@ -33,6 +35,10 @@ const router = createBrowserRouter([
       },{
         path:"/log",
         element:<Login></Login>
+      },
+      {
+        path:"/signup",
+        element:<SignUp></SignUp>
       },{
         path:"/mycart",
         element:<Mycart></Mycart>
@@ -46,7 +52,7 @@ const router = createBrowserRouter([
       {
         path:"/detailsdata/:name",
         element:<DetailsData></DetailsData>,
-        loader: ({params}) => fetch(`http://localhost:5000/dataforall/${params.name}`)
+         loader: ({params}) => fetch(`http://localhost:5000/dataforall/${params.name}`)
       }
 
     ]
@@ -60,7 +66,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <Provider>
     <RouterProvider router={router}></RouterProvider>
+    </Provider>
+
   </React.StrictMode>,
 )
 

@@ -4,6 +4,7 @@ import Section2 from './Section2';
 import Card from '../Card/Card';
 import { useLoaderData } from 'react-router-dom';
 
+
 const FirstHome = () => {
     const card=useLoaderData()
     console.log(card);
