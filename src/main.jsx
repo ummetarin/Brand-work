@@ -46,7 +46,7 @@ const router = createBrowserRouter([
       },{
         path:"/mycart",
         element:<Mycart></Mycart>
-        
+
       },{
         path:"/over",
         element:<Overview></Overview>
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/detailsdata/:name",
-        element:<DetailsData></DetailsData>,
+        element:<PR><DetailsData></DetailsData></PR>,
          loader: ({params}) => fetch(`http://localhost:5000/dataforall/${params.name}`)
       },{
         path:"/dataforshow/:id",
@@ -67,7 +67,7 @@ const router = createBrowserRouter([
         loader:({params})=>fetch(`http://localhost:5000/dataforshow/${params.id}`)
       },{
         path:"/updatedata/:id",
-        element:<Update></Update>,
+        element:<PR><Update></Update></PR>,
         loader: ({params}) => fetch(`http://localhost:5000/dataforupdateall/${params.id}`)
       }
 
@@ -75,9 +75,6 @@ const router = createBrowserRouter([
   }
   
 ]);
-
-
-
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

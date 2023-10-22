@@ -5,6 +5,7 @@ const EachShow = ({data}) => {
     const {ID,Image,Name,BrandName,Type,Price,Rating,Showdes} = data||{}
     console.log(ID);
 
+   
     return (
         <div>
             <div className=' font-bold'>

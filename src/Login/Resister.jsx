@@ -13,11 +13,7 @@ const Resister = () => {
   const {createUser,signin,googlesignin}=useContext(AuthContext);
  
 
-  // const {signUp}=useContext(AuthContext);
-  // const[email,setEmail]=useState("");
-  // const[password,setPassword]=useState("");
-  // const[error,setError]=useState("")
-  // const{googlesignin}=useContext(AuthContext)
+      
    const handlres=e=>{
         
        // if(!/^(?=.*[a-z])(?=.*![A-Z])(?=.*\d)(?=.*![@$!%*?&])[A-Za-z\d@$!%*?&]{,6}$/.test(password)){
@@ -26,13 +22,27 @@ const Resister = () => {
        e.preventDefault();
        const email=e.target.email.value;
        const password=e.target.password.value;
-       signin(email,password).
+       if(!/^(?=.*[a-z])(?=.*![A-Z])(?=.*\d)(?=.*![@$!%*?&])[A-Za-z\d@$!%*?&]{,6}$/.test(password)){
+        Swal.fire({
+          text:"OOps srry password is not Okey!"
+        })
+       }
+       return(
+        signin(email,password).
        then(res=>{
          console.log(res.user);
          Swal.fire('loged in!')
           {Location.state?Navigation(location.state):Navigation("/")}
        }
        )
+       )
+      //  signin(email,password).
+      //  then(res=>{
+      //    console.log(res.user);
+      //    Swal.fire('loged in!')
+      //     {Location.state?Navigation(location.state):Navigation("/")}
+      //  }
+      //  )
         .catch(err=>{
          console.log(err);
          Swal.fire({

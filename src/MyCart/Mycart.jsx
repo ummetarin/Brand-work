@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 const Mycart = () => {
-   
-  
+ 
     return (
         <div>
             <div className=' font-bold'>
@@ -26,11 +25,11 @@ const Mycart = () => {
             <button className='bg-red-500  text-1xl rounded-md  btn'>Delete</button>
          </div>
          </div>
+       </div>
+       </div>
+       </div>
     </div>
-  </div>
-</div>
-        </div>
-        </div>
+    </div>
     );
 };
 
