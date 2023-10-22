@@ -1,55 +1,53 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../Provider/Provider';
+import { Navigate, useLocation, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const Login = () => {
 
-   const {createUser}=useContext(AuthContext);
-   const{googlesignin}=useContext(AuthContext)
-   console.log(googlesignin());
+   const {createUser,signin,googlesignin}=useContext(AuthContext);
+ 
+   const Location=useLocation();
+   const Navigation=useNavigate();
 
    const handlelogin=e=>{
     e.preventDefault();
-    const form=e.target;
-    const email=form.email.value;
-    const password=form.password.value;
-    console.log(email,password);
-    createUser(email,password)
-    .then(result =>{
-      console.log(result.user);
-      const createAt=result?.user?.metadata?.creationTime;
-
-      const user={email,createAt:createAt}
-      fetch ('http://localhost:5000/user',{
-        method:'POST',
-        headers:{
-          'content-type':'application/json'
-        },
-        body :JSON.stringify(user),
-          
-    })
-          .then(res=>res.json())
-          .then(data=>{
-          if(data.insertedId){
-            alert('a')
-          }
-})
-
-  })
-
-     
-      .catch(error =>{
-       console.error(error);
+    const email=e.target.email.value;
+    const password=e.target.password.value;
+    signin(email,password).
+    then(res=>{
+      console.log(res.user);
+      Swal.fire('loged in!')
+       {Location.state?Navigation(location.state):Navigation("/")}
+    }
+    )
+     .catch(err=>{
+      console.log(err);
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong!',
       })
-   
+     })   
 
     }
 
 
     const handlegogle=()=>{
-           googlesignin().then((result)=>{
-            console.log(result.user);
-
-           })
+      googlesignin()
+      .then(res=>{
+        console.log(res.user);
+        Swal.fire('Good Job!')
+        {Location.state?Navigation(location.state):Navigation("/")}
+      })
+      .catch(err=>{
+        console.log(err);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong!',
+        })
+       })   
     }
 
     return (

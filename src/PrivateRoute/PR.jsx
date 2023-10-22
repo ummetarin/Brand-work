@@ -3,13 +3,23 @@ import { AuthContext } from '../Provider/Provider';
 import { Navigate } from 'react-router-dom';
 
 const PR = ({children}) => {
-    const {user}=useContext(AuthContext);
+    const {user,loading}=useContext(AuthContext);
     console.log(user);
 
-if(user){
-    children;
-}
-return <Navigate to={'/res'} replace></Navigate>
+    if(loading){
+        return(
+         <div>
+            <span className="loading loading-ball loading-lg"></span>
+         </div>
+        )
+    }
+
+    if(user){
+        return children;
+    }
+
+
+return <Navigate to={'/log'} ></Navigate>
     
 };
 

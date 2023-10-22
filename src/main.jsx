@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/addcart",
-        element:<Addcard></Addcard>
+        element:<PR><Addcard></Addcard></PR>
       },{
         path:"/log",
         element:<Login></Login>
@@ -46,6 +46,7 @@ const router = createBrowserRouter([
       },{
         path:"/mycart",
         element:<Mycart></Mycart>
+        
       },{
         path:"/over",
         element:<Overview></Overview>
@@ -58,7 +59,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/detailsdata/:name",
-        element:<PR><DetailsData></DetailsData></PR>,
+        element:<DetailsData></DetailsData>,
          loader: ({params}) => fetch(`http://localhost:5000/dataforall/${params.name}`)
       },{
         path:"/dataforshow/:id",

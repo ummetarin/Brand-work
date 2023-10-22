@@ -56,10 +56,6 @@ const Update = () => {
       <label className="label">
       <span className="label-text">Username</span>
       </label>
-      <label className="input-group">
-     <span className='w-24'>ID</span>
-      <input type="text" name='ID' placeholder="Price" className="input input-bordered  lg:w-[600px] md:w-[600px] w-[400px]" />
-    </label>
      </div>
  </div>
  <div className='flex lg:flex-row md:flex-row flex-col justify-center gap-14 '>

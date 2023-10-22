@@ -22,17 +22,21 @@ const Provider = ({children}) => {
    }
 
 
-   const googlesignin=(value)=>{
+   const googlesignin=()=>{
+    setLoading(true);
       return signInWithPopup(auth,googleProvider);
+
 
    }
 
 
-   const signUp=(email,password)=>{
-     return createUserWithEmailAndPassword(auth,email,password)
+   const signin=(email,password)=>{
+    setLoading(true);
+     return signInWithEmailAndPassword(auth,email,password)
    }
 
    const logOut=()=>{
+    setLoading(true);
       return signOut(auth);
    }
    
@@ -40,7 +44,7 @@ const Provider = ({children}) => {
     const unsub=onAuthStateChanged(auth,(currentUser)=>{
         console.log('state cnged');
         setUser(currentUser)
-
+        setLoading(false);
     })
     return(()=>{
         return unsub()
@@ -54,6 +58,7 @@ const Provider = ({children}) => {
     createUser,
     googlesignin,
     logOut,
+    signin,
     
 
    }

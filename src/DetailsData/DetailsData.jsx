@@ -9,22 +9,6 @@ const DetailsData = () => {
 
  
     const data=useLoaderData()
-
-  //   const[data,setData]=useState([]);
-  // const {name}=useParams();
-
-    // useEffect(()=>{
-    //   fetch(`http://localhost:5000/dataforall/${name}`)
-    //   .then(res=>{
-    //       res.json()
-    //   })
-    //   .then(data=>{
-    //     setData(data)
-    //     console.log(data);
-
-    //   })
-    // })
-    // console.log(data);
     console.log(data);
     return (
         <div>
