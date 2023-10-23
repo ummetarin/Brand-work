@@ -11,8 +11,8 @@ const EachData = ({data}) => {
             
 
 <div className=' font-bold'>
-            <div className="card card-compact w-[400px] h-[600px] shadow-xl">
-             <figure><img className='w-[400px] h-[400px]' src={data.Image} alt="Shoes" /></figure>
+            <div className="card card-compact w-[400px] h-[600px]  shadow-xl ">
+             <figure><img className='w-[400px] h-[400px]  mx-auto ' src={data.Image} alt="Shoes" /></figure>
              <div className="card-body">
             <h1 className='text-xl mt-4 '>{data.Name}</h1>    
             <h1 className='text-xl mt-2 '>{data.BrandName}</h1>

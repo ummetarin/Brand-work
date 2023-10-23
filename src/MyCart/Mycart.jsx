@@ -59,7 +59,7 @@ const Mycart = () => {
  
     return (
        
-    <div className='mt-24 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-16 lg:ml-44 md:ml-44  '>
+    <div className='mt-24 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-16 lg:ml-44 md:ml-44 ml-24  '>
           {
             set.map(da=><Carddlt key={da.Id} handledlt={handledlt} data={da}></Carddlt>)
           }
