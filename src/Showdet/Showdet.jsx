@@ -22,13 +22,11 @@ const Showdet = () => {
 const handleaddcard=()=>{
   fetch("http://localhost:5000/dataforcard",{
     method: 'POST', 
+    
     headers:{
-      image:data.Image,
-      price:data.Price,
-      Showdes:data.Showdes,
-      name:data.Name,
+      'Content-Type': 'application/json',
     } , 
-    body: JSON.stringify(data),
+    body: JSON.stringify(cardData),
 
   })
   .then(response => response.json())

@@ -2,53 +2,58 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../Provider/Provider';
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 const Login = () => {
 
-   const {createUser,signin,googlesignin}=useContext(AuthContext);
- 
-   const Location=useLocation();
-   const Navigation=useNavigate();
+  const { googlesignin} = useContext(AuthContext);
+  const Location = useLocation();
+  const Navigation = useNavigate();
 
-   const handlelogin=e=>{
+  const handleLogin = async (e) => {
     e.preventDefault();
-    const email=e.target.email.value;
-    const password=e.target.password.value;
-    signin(email,password).
-    then(res=>{
-      console.log(res.user);
-      Swal.fire('loged in!')
-       {Location.state?Navigation(location.state):Navigation("/")}
-    }
-    )
-     .catch(err=>{
-      console.log(err);
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    // Validate the password directly in the JSX code
+    if (password.length <6 || /[A-Z]/.test(password) || /[!@#$%^&*()_+{}\[\]:;<>,.?~\\]/.test(password)) {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'Something went wrong!',
-      })
-     })   
-
+        text: 'Invalid password! Password should have less than 6 characters, no uppercase letters, and no special characters.',
+      });
+      return;
     }
 
+    // Initialize Firebase Authentication
+    const auth = getAuth();
 
-    const handlegogle=()=>{
-      googlesignin()
-      .then(res=>{
-        console.log(res.user);
-        Swal.fire('Good Job!')
-        {Location.state?Navigation(location.state):Navigation("/")}
-      })
-      .catch(err=>{
-        console.log(err);
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'Something went wrong!',
-        })
-       })   
+    try {
+      // Sign in the user with email and password
+      await signInWithEmailAndPassword(auth, email, password);
+
+      Swal.fire('Logged in!');
+      if (Location.state) {
+        Navigation(Location.state);
+      } else {
+        Navigation('/');
+      }
+    } catch (error) {
+      console.error(error);
+  
     }
+  };
+
+  const handlegogle=()=>{
+    googlesignin().then((result)=>{
+     console.log(result.user);
+     Swal.fire({
+        text: 'Loged in successfully!',
+      })
+
+    })
+  }
+
 
     return (
         <div>
@@ -56,7 +61,7 @@ const Login = () => {
 
     <div className="hero mt-8 h-[400px] ">
     <div className="card  w-full max-w-sm shadow-2xl">
-      <form onSubmit={handlelogin} className="card-body">
+      <form onSubmit={handleLogin} className="card-body">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>

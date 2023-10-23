@@ -1,0 +1,16 @@
+
+/* CSS for dark mode */
+.dark-mode {
+    --background-color: #3e3d3d;
+    --text-color: #ffffff;
+    
+  }
+  
+  /* Apply styles using custom properties */
+  .app {
+    background-color: var(--background-color);
+    color: var(--text-color);
+   
+  }
+  
+  

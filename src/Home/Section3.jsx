@@ -2,29 +2,27 @@ import React from 'react';
 
 const Section3 = () => {
     return (
-      <div className='mx-auto text-5xl lg:ml-80 mt-14 rounded-lg'>
-        <div className="stats stats-vertical lg:stats-horizontal shadow">
-  
-  <div className="stat text-center mt-6">
-    <div className="stat-title mt-3">Downloads</div>
-    <div className="stat-value mt-6">31K</div>
-    <div className="stat-desc mt-6">Jan 1st - Feb 1st</div>
-  </div>
-  
-  <div className="stat text-center mt-6">
-    <div className="stat-title mt-3">New Users</div>
-    <div className="stat-value mt-6">4,200</div>
-    <div className="stat-desc mt-6">↗︎ 400 (22%)</div>
-  </div>
-  
-  <div className="stat text-center mt-6">
-    <div className="stat-title mt-3">New Registers</div>
-    <div className="stat-value mt-6">1,200</div>
-    <div className="stat-desc mt-6">↘︎ 90 (14%)</div>
-  </div>
-  
-</div>
-      </div>
+      <div>
+            <h1 className='text-4xl text-center text-blue-900 font-bold  mt-12'> Some Watches Collection</h1>
+               <div className='flex lg:flex-row md-flex-row flex-col gap-5 mt-12 justify-center lg:ml-1 md:ml-1 ml-24'>
+               <div className='' >
+               <div className=''>
+                <img className='w-[450px] h-[400px] shadow-lg rounded-lg' src="/image/watch1.jpg" alt="" />
+               </div>
+               <div className='mt-4'>
+                 <img className='w-[450px] h-[400px] shadow-lg rounded-lg' src="/image/watch2.jpg" alt="" />
+               </div>
+               </div>
+               <div>
+               <div>
+                <img className='w-[450px] h-[400px] shadow-lg rounded-lg' src="/image/watch3.jpg" alt="" />
+               </div>
+               <div className='mt-4'>
+                 <img className='w-[450px] h-[400px] shadow-lg rounded-lg' src="/image/watch4.jpeg" alt="" />
+               </div>
+               </div>
+               </div>
+           </div>
     );
 };
 

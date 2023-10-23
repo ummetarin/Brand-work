@@ -19,7 +19,7 @@ const PR = ({children}) => {
     }
 
 
-return <Navigate to={'/log'} ></Navigate>
+return <Navigate to={'/res'} ></Navigate>
     
 };
 

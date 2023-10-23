@@ -80,7 +80,7 @@ const Contruct = () => {
         </div>
      </div>
      <div className='lg:mt-44 md:mt-52 mt-[550px]  lg:ml-1 md:ml-1 ml-44'>
-        <img className='rounded-full w-[250px] h-[350px]' src="/public/image/bagu.jpg" alt="" />
+        <img className='rounded-full w-[250px] h-[350px]' src="/image/bagu.jpg" alt="" />
      </div>
         </div>
     );

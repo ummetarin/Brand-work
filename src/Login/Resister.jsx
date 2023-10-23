@@ -1,85 +1,86 @@
-import React, { useContext, useState } from 'react';
-import { AuthContext } from '../Provider/Provider';
-import Swal from 'sweetalert2';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import React, { useContext } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-
-
+import Swal from 'sweetalert2';
+import { AuthContext } from '../Provider/Provider';
 
 const Resister = () => {
 
-  const Location=useLocation();
-  const Navigation=useNavigate();
+    
+  const { googlesignin} = useContext(AuthContext);
+  const Location = useLocation();
+  const Navigation = useNavigate();
 
-  const {createUser,signin,googlesignin}=useContext(AuthContext);
- 
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
 
-      
-   const handlres=e=>{
-        
-       // if(!/^(?=.*[a-z])(?=.*![A-Z])(?=.*\d)(?=.*![@$!%*?&])[A-Za-z\d@$!%*?&]{,6}$/.test(password)){
-       //    setError('Less then 6,no Upper case,no Special charater');
-       // }
-       e.preventDefault();
-       const email=e.target.email.value;
-       const password=e.target.password.value;
-       if(!/^(?=.*[a-z])(?=.*![A-Z])(?=.*\d)(?=.*![@$!%*?&])[A-Za-z\d@$!%*?&]{,6}$/.test(password)){
-        Swal.fire({
-          text:"OOps srry password is not Okey!"
-        })
-       }
-       return(
-        signin(email,password).
-       then(res=>{
-         console.log(res.user);
-         Swal.fire('loged in!')
-          {Location.state?Navigation(location.state):Navigation("/")}
-       }
-       )
-       )
-      //  signin(email,password).
-      //  then(res=>{
-      //    console.log(res.user);
-      //    Swal.fire('loged in!')
-      //     {Location.state?Navigation(location.state):Navigation("/")}
-      //  }
-      //  )
-        .catch(err=>{
-         console.log(err);
-         Swal.fire({
-           icon: 'error',
-           title: 'Oops...',
-           text: 'Something went wrong!',
-         })
-        })   
+    // Validate the password directly in the JSX code
+    if (password.length < 6 || /[A-Z]/.test(password) || /[!@#$%^&*()_+{}\[\]:;<>,.?~\\]/.test(password)) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Invalid password! Password should have less than 6 character, no uppercase letters, and no special characters.',
+      });
+      return;
     }
 
-    const handlegogle=()=>{
-        googlesignin().then((result)=>{
-         console.log(result.user);
+    // Initialize Firebase Authentication
+    const auth = getAuth();
 
-        })
- }
+    try {
+      // Sign in the user with email and password
+      await signInWithEmailAndPassword(auth, email, password);
+
+      // If successful, redirect the user
+      console.log('Logged in successfully');
+      Swal.fire('Logged in!');
+      if (Location.state) {
+        Navigation(Location.state);
+      } else {
+        Navigation('/');
+      }
+    } catch (error) {
+      console.error(error);
+      
+    }
+  };
+
+  const handlegogle=()=>{
+    googlesignin().then((result)=>{
+     console.log(result.user);
+     Swal.fire({
+        text: 'Loged in successfully!',
+      });
+
+    })
+  }
+
 
     return (
         <div>
+              <div>
+        
+
         <div className="hero mt-8 h-[400px] ">
         <div className="card  w-full max-w-sm shadow-2xl">
-          <form  className="card-body">
+          <form onSubmit={handleLogin} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
               </label>
-              <input  type="email" name='email' placeholder="email" className="input input-bordered" required />
+              <input type="email" name='email' placeholder="email" className="input input-bordered" required />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
-              <input   type="password" name='password' placeholder="password" className="input input-bordered" required />
+              <input type="password" name='password' placeholder="password" className="input input-bordered" required />
              
             </div>
             <div className="form-control mt-6">
-              <button onClick={handlres} className="btn bg-red-600 text-white">Resister</button>
+              <button className="btn bg-red-600 text-white">Resister</button>
             </div>
     
             <div className="form-control mt-6">
@@ -92,6 +93,7 @@ const Resister = () => {
     
     
             </div>
+        </div>
     );
 };
 

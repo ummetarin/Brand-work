@@ -14,7 +14,6 @@ import Contruct from './contructInfo/Contruct.jsx';
 import Erro from './Error/Erro';
 import FirstHome from './Home/FirstHome';
 import DetailsData from './DetailsData/DetailsData';
-import SignUp from './Login/SignUp';
 import Provider from './Provider/Provider';
 import Showdet from './Showdet/Showdet';
 import Update from './update/Update';
@@ -41,12 +40,9 @@ const router = createBrowserRouter([
         element:<Login></Login>
       },
       {
-        path:"/signup",
-        element:<SignUp></SignUp>
-      },{
         path:"/mycart",
-        element:<Mycart></Mycart>
-
+        element:<PR><Mycart></Mycart></PR>,
+        loader:()=>fetch('http://localhost:5000/dataforcard')
       },{
         path:"/over",
         element:<Overview></Overview>
