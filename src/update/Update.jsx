@@ -21,7 +21,7 @@ const Update = () => {
    const newbrand={name,brand,Type,Price,Rating,Image};
    console.log(newbrand);
   
-   fetch(`http://localhost:5000/dataforupdateall/${_id}`,{
+   fetch(`https://as-ten-server.vercel.app/dataforupdateall/${_id}`,{
        method:'PUT',
        headers:{
         'content-type':'application/json'

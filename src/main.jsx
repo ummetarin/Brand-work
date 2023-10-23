@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       {
         path:"/mycart",
         element:<PR><Mycart></Mycart></PR>,
-        loader:()=>fetch('http://localhost:5000/dataforcard')
+        loader:()=>fetch('https://as-ten-server.vercel.app/dataforcard')
       },{
         path:"/over",
         element:<Overview></Overview>
@@ -56,15 +56,15 @@ const router = createBrowserRouter([
       {
         path:"/detailsdata/:name",
         element:<PR><DetailsData></DetailsData></PR>,
-         loader: ({params}) => fetch(`http://localhost:5000/dataforall/${params.name}`)
+         loader: ({params}) => fetch(`https://as-ten-server.vercel.app/dataforall/${params.name}`)
       },{
         path:"/dataforshow/:id",
         element:<PR><Showdet></Showdet></PR>,
-        loader:({params})=>fetch(`http://localhost:5000/dataforshow/${params.id}`)
+        loader:({params})=>fetch(`https://as-ten-server.vercel.app/dataforshow/${params.id}`)
       },{
         path:"/updatedata/:id",
         element:<PR><Update></Update></PR>,
-        loader: ({params}) => fetch(`http://localhost:5000/dataforupdateall/${params.id}`)
+        loader: ({params}) => fetch(`https://as-ten-server.vercel.app/dataforupdateall/${params.id}`)
       }
 
     ]

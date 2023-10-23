@@ -29,7 +29,7 @@ const Mycart = () => {
       //     'Your file has been deleted.',
       //     'success'
       //   )
-      fetch(`http://localhost:5000/dataforcard/${_id}`,{
+      fetch(`https://as-ten-server.vercel.app/dataforcard/${_id}`,{
           method:"DELETE"
 
       })

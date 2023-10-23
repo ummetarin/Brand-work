@@ -20,7 +20,7 @@ const Showdet = () => {
   // 3. Create out useEffect function
 
 const handleaddcard=()=>{
-  fetch("http://localhost:5000/dataforcard",{
+  fetch("https://as-ten-server.vercel.app/dataforcard",{
     method: 'POST', 
     
     headers:{
